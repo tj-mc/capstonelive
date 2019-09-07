@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Error
+{% endblock %}
+
+{% block main %}
+
+<h3 >Whoops!</h3>
+
+
+
+<p class='center'>{{ error | safe }}</p>
+<p class='center'>Please wait to post again.</p>
+<p id="countdown"></p>
+
+
+<script>
+// Total seconds to wait
+    var seconds = 11;
+
+    function countdown() {
+        seconds = seconds - 1;
+        if (seconds <= 0) {
+            window.location = "https://www.capstone.live";
+        } else {
+            // Update remaining seconds
+            document.getElementById("countdown").innerHTML = seconds;
+            // Count down using javascript
+            window.setTimeout("countdown()", 1000);
+        }
+    }
+
+    // Run countdown function
+    countdown();
+
+</script>
+
+{% endblock %}

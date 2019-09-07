@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    capstone.live
+{% endblock %}
+<br>
+{% block main %}
+
+<div id = "page"  onkeyup="countChars()">
+
+
+
+
+    <p id="fader" class ="center">Enter your message. It will be read aloud on the screen.</p>
+    <p class = "center"><span id="charCount">0</span> / 70</p>
+    <div class="trumbowyg-dark">
+        <div id="editor"></div>
+    </div>
+
+
+
+
+    <script>
+        window.onload = function() {
+            document.getElementById("editor").focus();
+        };
+    </script>
+
+
+    <script>
+        function countChars() {
+            var text = document.getElementById('editor').textContent
+            var length = text.length
+            document.getElementById('charCount').innerHTML = length;
+            if (text.includes("#") || text.includes("@") || text.includes("&"))
+            {
+                document.getElementById("loginbutton").style.display='none';
+                document.getElementById("charCount").style.color='red';
+                document.getElementById("editor").style.color='red';
+                document.getElementById("tooLong").innerHTML="Sorry, you used an illegal character. <br>Please don't use #, @ or & in your message.<br> It upsets my fragile program.";
+
+            }
+
+            else if (length > 70)
+                {
+                  document.getElementById("loginbutton").style.display='none';
+                  document.getElementById("charCount").style.color='red';
+                  document.getElementById("editor").style.color='red';
+                  document.getElementById("tooLong").innerHTML="Your message is too long. There's a 70 character limit.";
+
+                }
+            else {
+                document.getElementById("loginbutton").style.display='block';
+                document.getElementById("charCount").style.color='white';
+                document.getElementById("editor").style.color='white';
+                document.getElementById("tooLong").innerHTML="";
+            }
+
+        }
+    </script>
+
+
+    <script>
+      function mySubmit() {
+         document.getElementById('textData').value = $('#editor').trumbowyg('html');
+         // document.getElementById('textData').value = 'hello';
+         document.getElementById("newentry").submit();
+       }
+    </script>
+
+    <p class = "center" id="tooLong"></p>
+
+
+
+
+    <form action="/" method="post" id="newentry" onsubmit="loginbutton.disabled = true; return true;">
+            <div class="form-group">
+                <input type='hidden' id='textData' name='textData' value=''/>
+                <button class="btn btn-secondary btn-block" type="submit" id="loginbutton" onclick="mySubmit()" name="loginbutton">submit</button>
+            </div>
+    </form>
+
+</div>
+{% endblock %}

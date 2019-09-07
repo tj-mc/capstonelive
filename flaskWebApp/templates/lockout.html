@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    It's almost time.
+{% endblock %}
+
+{% block main %}
+<script>
+
+     window.onload = function() {
+            document.getElementById("seeMore").style.visibility = 'hidden';
+            document.getElementById('hideLink').style.visibility = 'hidden';
+        document.getElementById('seeMoreLink').style.visibility = 'visible';
+        };
+
+
+    function show() {
+    document.getElementById('seeMore').style.visibility = 'visible' ;
+    document.getElementById('hideLink').style.visibility = 'visible';
+    document.getElementById('seeMoreLink').style.visibility = 'hidden';
+
+};
+
+    function hide() {
+    document.getElementById('seeMore').style.visibility = 'hidden' ;
+    document.getElementById('hideLink').style.visibility = 'hidden';
+    document.getElementById('seeMoreLink').style.visibility = 'visible';
+};
+
+</script>
+
+
+<br>
+<h4>Not long to go.</h4>
+
+
+<p id="countdown"></p>
+<br>
+
+<p class='center'>capstone.live is an interactive performance that uses your responses to generate sound and visuals.</p>
+<p class='center'>Each short message you submit will be read aloud by a Text-to-Speech engine and displayed on screen.
+This unprecendented level of artist-audience interactivity
+ is designed to evoke reflections on the power of web-based technologies in an artistic context.</p>
+
+<a href="#" id="seeMoreLink" onclick="return show()">See More</a>
+
+<a href="#" id="hideLink" onclick="return hide()">See Less</a>
+
+<div id="seeMore">
+        <br>
+        <br>
+
+        <em>
+
+        <p>Drawing inspiration from experimental electronic musicians such as Aoki Takamasa and Ryoji Ikeda, Lachlan Grant, Tom McIntosh and Lachlan Parker create an interactive audio-visual environment with an unprecedented level of audience-performer interactivity.</p>
+
+        <p>capstone.live is a study in digital connections. Millions of devices around us send and receive data in an effort to enrich our lives, but the underlying form of digital communication is often obfuscated, presenting itself instead as refined and simple. This performance aims to expose both the raw nature of digital information and its role in an artistic context.</Pp>
+
+        <p>Audience members are invited to use this website to submit a message that will be displayed on the screen and read aloud by a text-to-speech synthesiser. </p>
+
+        <p>In order to ensure that every part of the performance is equally attended to, each group member has a tightly defined role:</p>
+
+        <p>McIntosh will create dizzying synthesised visuals in TouchDesigner, monitoring the incoming messages and displaying them on the screen. Using visual motifs of programming and digital information, the underlying form of the system is exposed in a creative manner. These visuals also include the real-time logs of requests made to the capstone.live server by the audience members.</p>
+
+        <p>Grant will receive messages from the capstone.live server via a custom built program that converts text to synthesised speech. As an array of computer generated voices reads messages from the audience, Grant manipulates these sounds and creates lush granular textures, looping and repeating tiny fragments of audio. This means that Grant’s patch is entirely dependant on audience inputs, furthering the concept of “connectivity” within the performance.</p>
+
+        <p>Parker will provide a strong musical backbone that is a cornerstone to the unpredictability of McIntosh and Grant’s work. Performed using Ableton Live and an array of MIDI controllers, Parker’s musical work is totally sympathetic to the “digital connectivity” concepts that underpin capstone.live. Short electronic blips and fast paced high-hat cymbals are analogous to the digital bits being transferred between the audience and the performers. As defined in Sonic Art by Moore, these sounds have a sonic “appearance” that draws an analogy with with the on-screen visuals  This is accompanied by warm and lush chords that are used to symbolise the “beautiful facade” of the digital system.</p>
+
+        <p>Throughout this performance, listeners will be taken on an audio-visual journey that invites interactivity, experimentation and reflection. By experiencing a digital information flow in a live, artistic setting, the audience may reflect on the question: “What does it mean to be connected?”.</p>
+
+        </em>
+
+</div>
+
+
+
+
+<!--From w3 schools-->
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 2, 2019 20:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="countdown"
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "...";
+  }
+}, 1000);
+</script>
+
+
+
+
+
+
+{% endblock %}
