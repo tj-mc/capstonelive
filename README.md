@@ -9,8 +9,9 @@ There are 4 main components to the performance:
 	 - Displays user messages on the screen
 	 - Provides a GUI for checking messages before displaying them and other features
 	 - Broken in to 3 files for performance reasons. All 3 must run at once.
+	 - Contains Python files written for 2.7, as this is the version that runs inside TouchDesigner
  - TTS Listener
-	 - Written in Python
+	 - Written in Python 2.7
 	 - Checks the web server for a message to read out
 	 - Reads the message using the MacOS 'say' command (So it has to be run on a mac)
  - Flask web app
