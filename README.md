@@ -21,9 +21,26 @@ There are 4 main components to the performance:
    
 More documentation and a video demonstration coming soon. The original implementation can be accessed at www.capstone.live, though you won't be able to enjoy the awesome live performance that accompanies it.
    
-*Warning*
-*I take no responsibility for damages caused by this software. Use at your own risk. Software is not guaranteed to be bug free.*
+# Warning
+I take no responsibility for damages caused by this software. Use at your own risk. Software is not guaranteed to be bug free.
 
-*Note that this implementation does not contain any protection for repeated submissions, making it very vulnerable to a simple denial of service attack.*
+Note that this implementation does not contain any protection for repeated submissions, making it very vulnerable to a simple denial of service attack.
 
 # Software used
+Bootswatch v4.3.1  
+Homepage: https://bootswatch.com  
+Copyright 2012-2019 Thomas Park  
+Licensed under MIT  
+Based on Bootstrap  
+
+Bootstrap v4.3.1 (https://getbootstrap.com/)  
+Copyright 2011-2019 The Bootstrap Authors  
+Copyright 2011-2019 Twitter, Inc.  
+Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)  
+
+Trumbowyg v2.18.0 - A lightweight WYSIWYG editor  
+http://alex-d.github.io/Trumbowyg  
+license MIT  
+Alexandre Demode (Alex-D)  
+Twitter : @AlexandreDemode  
+Website : alex-d.fr  
