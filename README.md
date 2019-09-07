@@ -8,6 +8,7 @@ There are 4 main components to the performance:
  - Touch Designer
 	 - Displays user messages on the screen
 	 - Provides a GUI for checking messages before displaying them and other features
+	 - Broken in to 3 files for performance reasons. All 3 must run at once.
  - TTS Listener
 	 - Written in Python
 	 - Checks the web server for a message to read out
