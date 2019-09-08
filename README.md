@@ -46,3 +46,12 @@ license MIT
 Alexandre Demode (Alex-D)  
 Twitter : @AlexandreDemode  
 Website : alex-d.fr  
+
+TouchDesigner 099
+www.derivative.ca
+
+Python 2.x
+
+Flask for Python
+
+MySQL
