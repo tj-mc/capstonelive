@@ -2,6 +2,11 @@
 
 Source code for an interactive audio-visual performance with Python and TouchDesigner. Audience members submit short messages via a web app, which is shown on screen using TouchDesigner and read aloud using MacOS using the command line program 'say'.
 
+The performance originally took place on September 2, 2019 at the Griffith University Queensland Convservatorium in Brisbane, Australia.  
+Completed for the *Music Technology Live Capstone* class in 3rd year.
+
+Performed and concieved in collaboration with Lachlan Parker and Lachlan Grant.
+
 ## Structure
 There are 4 main components to the performance:
 
