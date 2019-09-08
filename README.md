@@ -12,7 +12,11 @@ There are 4 main components to the performance:
 
  - Touch Designer
 	 - Displays user messages on the screen
-	 - Provides a GUI for checking messages before displaying them and other features
+	 - Provides GUI Interface
+	 	- Check messages before going to screen
+		- Clear all current messages
+		- Send a message to the TTS Listener
+		- Skip a message
 	 - Broken in to 3 files for performance reasons. All 3 must run at once.
 	 - Contains Python files written for 2.7, as this is the version that runs inside TouchDesigner
  - TTS Listener
@@ -23,7 +27,7 @@ There are 4 main components to the performance:
 	 - Allows communication between all the components
 	 - Is the interface for audience members to submit messages
  - Database
-	 - Very simple MySQL database
+	 - Very simple MySQL database.
 	 - You'll need to set this up yourself and connect it to your flask app
    
 More documentation and a video demonstration coming soon. The original implementation can be accessed at www.capstone.live, though you won't be able to enjoy the awesome live performance that accompanies it.
@@ -31,7 +35,7 @@ More documentation and a video demonstration coming soon. The original implement
 # Warning
 I take no responsibility for damages caused by this software. Use at your own risk. Software is not guaranteed to be bug free.
 
-Note that this implementation does not contain any protection for repeated submissions, making it very vulnerable to a simple denial of service attack.
+Note that this implementation does not contain any back-end protection for repeated submissions, making it very vulnerable to a simple denial of service attack.
 
 # Software used
 Bootswatch v4.3.1  
